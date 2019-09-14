@@ -1,4 +1,4 @@
-rm `ls|grep -v -E 'crawler.py|httprobe.txt'` -r
+#!/bin/bash
 
 #创建目录
 x=4 ; input=httprobe.txt ; export x=4 ; export input=httprobe.txt
