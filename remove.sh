@@ -38,7 +38,7 @@ do
 echo "bash /root/script/3_httprobe/dir_${i}/${i}.sh" >> exe.sh
 done
 
-cat exe.sh | parallel -j $x
+cat exe.sh | parallel --jobs 0 --progress --delay 1
 
 for i in `seq 1 $x`
 do
