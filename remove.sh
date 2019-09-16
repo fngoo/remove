@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #创建目录
-x=4 ; input=httprobe.txt ; export x=4 ; export input=httprobe.txt
+x=8 ; input=httprobe.txt ; export x=8 ; export input=httprobe.txt
 for i in `seq 1 $x`
 do
 mkdir dir_$i
@@ -17,7 +17,7 @@ split -l $each  $input -d -a 3 split_
 maybe=`ls|grep split|wc -l|grep -o -P ".*?(?=\ )"`
 if [ '$maybe' != '$x' ]
 then
-cat split_000 >> split_004 ; rm split_000
+cat split_000 >> split_00$x ; rm split_000
 fi
 
 #移动文件至对应数字目录
@@ -40,6 +40,7 @@ done
 
 cat exe.sh | parallel --jobs 0 --progress --delay 1
 
+cd /root/script/3_httprobe
 for i in `seq 1 $x`
 do
 rm -r dir_$i
