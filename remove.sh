@@ -26,3 +26,5 @@ rm /root/script/3_httprobe/exe.sh
 
 rm dir_* -r
 sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe.txt
+
+ls ; wc -l $input ; du -h
