@@ -5,7 +5,6 @@ input=httprobe.txt ; export input=httprobe.txt
 
 i=1
 echo '#!/bin/bash' >> /root/script/3_httprobe/exe.sh
-num=1
 for line in `cat $input`
 do
 
