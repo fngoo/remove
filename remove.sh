@@ -1,5 +1,6 @@
 #!/bin/bash
 
+wc -l $input
 #创建目录
 input=httprobe.txt ; export input=httprobe.txt
 
