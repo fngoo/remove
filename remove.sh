@@ -1,8 +1,8 @@
 #!/bin/bash
 
-wc -l $input
 #创建目录
 input=httprobe.txt ; export input=httprobe.txt
+wc -l $input
 
 i=1
 echo '#!/bin/bash' >> /root/script/3_httprobe/exe.sh
