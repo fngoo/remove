@@ -47,8 +47,7 @@ done
 for line in `cat /root/script/3_httprobe/dir_$i/red.txt`
 do
 
-curl -L "$line" | grep -oP "XSS Hunter Team" >> $output/red_xss.txt
-echo "$line" >> $output/red_xss.txt
+curl -L "$line" | grep -oP "XSS Hunter Team" >> $output/red_xss.txt && echo "$line" >> $output/red_xss.txt
 
 done
 
