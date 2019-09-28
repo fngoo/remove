@@ -49,7 +49,7 @@ done
 for line in `cat /root/script/3_httprobe/dir_$i/red.txt`
 do
 
-curl -L "$line" | grep -oP "XSS Hunter Team" |tee -a $output/red_xss.txt && echo "$line" >> $output/red_xss.txt
+a=`curl -L "$line" | grep -oP "XSS Hunter Team"` ; echo "$a" > /root/script/3_httprobe/dir_$i/red_x.txt ; if [ -s /root/script/3_httprobe/dir_$i/red_x.txt ]; then echo "$line" >> $output/red_xss.txt ; > /root/script/3_httprobe/dir_$i/red_x.txt ; fi
 
 done
 
