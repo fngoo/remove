@@ -20,7 +20,7 @@ i=$((i+1))
 
 done
 
-cat /root/script/3_httprobe/exe.sh | parallel --jobs 0 --progress --delay 0.1
+cat /root/script/3_httprobe/exe.sh | parallel --jobs 0 --progress --delay 0.5
 rm /root/script/3_httprobe/exe.sh
 
 rm dir_* -r
