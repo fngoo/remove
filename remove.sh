@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #创建目录
+cd /root/script/3_httprobe
 input=httprobe.txt ; export input=httprobe.txt
 wc -l $input
 
@@ -28,12 +29,16 @@ sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe
 
 ls ; wc -l $input
 
-
+#Eyewitness
+mkdir $output/0_httprobe
+cd /root/script/4_getjs/EyeWitness
+python EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --web --no-prompt -d $output/0_httprobe
 
 
 
 
 #创建目录
+cd /root/script/3_httprobe
 input=httprobe.txt ; export input=httprobe.txt
 
 i=1
