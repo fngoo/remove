@@ -30,17 +30,13 @@ sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe
 for var in `cat $var`
 do
 #81 8443 8080 8000 8880
-echo "http://${var}:80" >> port.txt
 echo "http://${var}:81" >> port.txt
-echo "http://${var}:443" >> port.txt
 echo "http://${var}:8443" >> port.txt
 echo "http://${var}:8080" >> port.txt
 echo "http://${var}:8000" >> port.txt
 echo "http://${var}:8880" >> port.txt
 
-echo "https://${var}:80" >> port.txt
 echo "https://${var}:81" >> port.txt
-echo "https://${var}:443" >> port.txt
 echo "https://${var}:8443" >> port.txt
 echo "https://${var}:8080" >> port.txt
 echo "https://${var}:8000" >> port.txt
@@ -82,3 +78,4 @@ done
 
 rm dir_* -r
 ls ; wc -l $output/red_xss.txt
+data >> /root/date.txt
