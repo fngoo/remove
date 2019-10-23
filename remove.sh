@@ -41,6 +41,7 @@ echo "https://${var}:8443" >> port.txt
 echo "https://${var}:8080" >> port.txt
 echo "https://${var}:8000" >> port.txt
 echo "https://${var}:8880" >> port.txt
+done
 
 vl port.txt | grep -v "\[50" | grep -oP "http.*" >> /root/script/3_httprobe/httprobe.txt ; rm port.txt
 sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe.txt
