@@ -53,7 +53,13 @@ mkdir $output/0_httprobe
 cd /root/script/4_getjs/EyeWitness
 python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --web --no-prompt -d $output/0_httprobe
 
-
+#whatsweb
+cd /root/script/3_httprobe
+webanalyze -update
+for line in `cat httprobe.txt`
+do
+webanalyze -host $line -output csv >> /root/whatsweb.txt
+done
 
 
 #创建目录
