@@ -58,7 +58,7 @@ cd /root/script/3_httprobe
 webanalyze -update
 for line in `cat httprobe.txt`
 do
-webanalyze -host $line -output csv >> /root/whatsweb.txt
+webanalyze -crawl 10 -host $line -output csv >> /root/whatsweb.txt
 done
 
 
