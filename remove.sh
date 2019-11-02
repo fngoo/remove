@@ -57,7 +57,7 @@ python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --web --no-prompt 
 webanalyze -update
 for line in `cat /root/script/3_httprobe/httprobe.txt`
 do
-webanalyze -crawl 10 -host $line -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt
+echo "webanalyze -crawl 12 -host $line -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt ; wc -l /root/whatsweb.txt" > analyze.sh ; timeout 36 bash analyze.sh ; rm analyze.sh
 done
 
 #创建目录
