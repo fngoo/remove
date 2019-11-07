@@ -62,7 +62,9 @@ python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --web --no-prompt 
 webanalyze -update
 for line in `cat /root/script/3_httprobe/httprobe.txt`
 do
-echo "webanalyze -crawl 12 -host $line -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt ; wc -l /root/whatsweb.txt" > analyze.sh ; timeout 36 bash analyze.sh ; rm analyze.sh
+echo "webanalyze -crawl 12 -host $line -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt ; wc -l /root/whatsweb.txt" > analyze.sh
+timeout 36 bash analyze.sh
+rm analyze.sh
 done
 
 #创建目录
@@ -82,8 +84,10 @@ done
 for line in `cat /root/script/3_httprobe/dir_$i/red.txt`
 do
 
-a=`curl -L --speed-time 5 --speed-limit 1 "$line" | grep -o "XSS Hunter Team"` ; echo "$a" > /root/script/3_httprobe/dir_$i/red_x.txt ; a=`cat /root/script/3_httprobe/dir_$i/red_x.txt` ; if [ "$a" = "XSS Hunter Team" ]; then echo "$line" >> $output/red_xss.txt ; > /root/script/3_httprobe/dir_$i/red_x.txt ; fi
-
+a=`curl -L --speed-time 5 --speed-limit 1 "$line" | grep -o "XSS Hunter Team"`
+echo "$a" > /root/script/3_httprobe/dir_$i/red_x.txt
+a=`cat /root/script/3_httprobe/dir_$i/red_x.txt`
+if [ "$a" = "XSS Hunter Team" ]; then echo "$line" >> $output/red_xss.txt ; > /root/script/3_httprobe/dir_$i/red_x.txt; fi
 done
 
 rm dir_* -r
