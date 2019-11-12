@@ -84,7 +84,7 @@ done
 for line in `cat /root/script/3_httprobe/dir_$i/red.txt`
 do
 
-a=`curl -L --speed-time 5 --speed-limit 1 "$line" | grep -o "XSS Hunter Team"`
+a=`curl -k -L --speed-time 5 --speed-limit 1 "$line" | grep -o "XSS Hunter Team"`
 echo "$a" > /root/script/3_httprobe/dir_$i/red_x.txt
 a=`cat /root/script/3_httprobe/dir_$i/red_x.txt`
 if [ "$a" = "XSS Hunter Team" ]; then echo "$line" >> $output/red_xss.txt ; > /root/script/3_httprobe/dir_$i/red_x.txt; fi
