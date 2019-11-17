@@ -31,16 +31,35 @@ for var in `cat $var`
 do
 #81 8443 8080 8000 8880
 echo "http://${var}:81" >> port.txt
+echo "http://${var}:82" >> port.txt
+echo "http://${var}:83" >> port.txt
+echo "http://${var}:84" >> port.txt
+echo "http://${var}:85" >> port.txt
+echo "http://${var}:86" >> port.txt
+echo "http://${var}:87" >> port.txt
+echo "http://${var}:88" >> port.txt
+echo "http://${var}:89" >> port.txt
 echo "http://${var}:8443" >> port.txt
 echo "http://${var}:8080" >> port.txt
 echo "http://${var}:8000" >> port.txt
 echo "http://${var}:8880" >> port.txt
+echo "http://${var}:9090" >> port.txt
 
 echo "https://${var}:81" >> port.txt
+echo "https://${var}:82" >> port.txt
+echo "https://${var}:83" >> port.txt
+echo "https://${var}:84" >> port.txt
+echo "https://${var}:85" >> port.txt
+echo "https://${var}:86" >> port.txt
+echo "https://${var}:87" >> port.txt
+echo "https://${var}:88" >> port.txt
+echo "https://${var}:89" >> port.txt
 echo "https://${var}:8443" >> port.txt
 echo "https://${var}:8080" >> port.txt
 echo "https://${var}:8000" >> port.txt
 echo "https://${var}:8880" >> port.txt
+echo "https://${var}:9090" >> port.txt
+
 done
 
 vl -s 50 port.txt | grep -v "\[50" | grep -oP "http.*" >> /root/script/3_httprobe/httprobe.txt ; rm port.txt
