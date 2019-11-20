@@ -67,6 +67,14 @@ sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe
 
 ls ; wc -l $input
 
+cd /root/script/3_httprobe/vulnx
+vulnx -i /root/script/3_httprobe/httprobe.txt -c all -e -o $output/3_vulnx
+a=`ls $output/3_vulnx`
+if [ "$a" = "" ]
+then
+rm -r $output/3_vulnx
+fi
+
 #Eyewitness
 cd /root/script/4_getjs
 rm -r EyeWitness
