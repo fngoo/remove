@@ -67,6 +67,14 @@ sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe
 
 ls ; wc -l $input
 
+#vulnx
+rm -r /root/script/3_httprobe/vulnx
+cd /root/script/3_httprobe
+git clone https://github.com/anouarbensaad/vulnx.git
+cd vulnx
+sed "s,sudo ,,g" install.sh > 1.sh ; mv 1.sh install.sh
+bash install.sh
+
 cd /root/script/3_httprobe/vulnx
 vulnx -i /root/script/3_httprobe/httprobe.txt -c all -e -o $output/3_vulnx
 a=`ls $output/3_vulnx`
