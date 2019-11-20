@@ -29,7 +29,7 @@ sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe
 
 for var in `cat $var`
 do
-#81 8443 8080 8000 8880
+echo "http://${var}" >> port.txt
 echo "http://${var}:81" >> port.txt
 echo "http://${var}:82" >> port.txt
 echo "http://${var}:83" >> port.txt
@@ -45,6 +45,7 @@ echo "http://${var}:8000" >> port.txt
 echo "http://${var}:8880" >> port.txt
 echo "http://${var}:9090" >> port.txt
 
+echo "https://${var}" >> port.txt
 echo "https://${var}:81" >> port.txt
 echo "https://${var}:82" >> port.txt
 echo "https://${var}:83" >> port.txt
