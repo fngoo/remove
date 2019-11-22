@@ -77,7 +77,7 @@ sed "s,sudo ,,g" install.sh > 1.sh ; mv 1.sh install.sh
 bash install.sh
 
 cd /root/script/3_httprobe/vulnx
-vulnx -i /root/script/3_httprobe/httprobe.txt -c all -e -o $output/3_vulnx
+echo "vulnx -i /root/script/3_httprobe/httprobe.txt -t 16 -c all -e -o $output/3_vulnx" >> 1.sh ; timeout 3666 bash 1.sh ; rm 1.sh
 a=`ls $output/3_vulnx`
 if [ "$a" = "" ]
 then
