@@ -92,7 +92,7 @@ git clone https://github.com/FortyNorthSecurity/EyeWitness
 cd EyeWitness/setup ; bash setup.sh ; bash setup.sh ; pip3 install --upgrade pyasn1-modules
 mkdir $output/httprobe
 cd /root/script/4_getjs/EyeWitness
-python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --web --no-prompt -d $output/httprobe
+python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --timeout 16 --web --no-prompt -d $output/httprobe
 
 #whatsweb
 webanalyze -update
