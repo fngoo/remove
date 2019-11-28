@@ -63,6 +63,78 @@ echo "http://${var}:89" >> port.txt
 echo "http://${var}:9090" >> port.txt
 echo "http://${var}:9443" >> port.txt
 echo "http://${var}:981" >> port.txt
+echo "http://${var}:80" >> port.txt
+echo "http://${var}:81">> port.txt
+echo "http://${var}:300">> port.txt
+echo "http://${var}:443">> port.txt
+echo "http://${var}:591">> port.txt
+echo "http://${var}:593">> port.txt
+echo "http://${var}:832">> port.txt
+echo "http://${var}:981">> port.txt
+echo "http://${var}:1010">> port.txt
+echo "http://${var}:1311">> port.txt
+echo "http://${var}:2082">> port.txt
+echo "http://${var}:2087">> port.txt
+echo "http://${var}:2095">> port.txt
+echo "http://${var}:2096">> port.txt
+echo "http://${var}:2480">> port.txt
+echo "http://${var}:3000">> port.txt
+echo "http://${var}:3128">> port.txt
+echo "http://${var}:3333">> port.txt
+echo "http://${var}:4243">> port.txt
+echo "http://${var}:4567">> port.txt
+echo "http://${var}:4711">> port.txt
+echo "http://${var}:4712">> port.txt
+echo "http://${var}:4993">> port.txt
+echo "http://${var}:5000">> port.txt
+echo "http://${var}:5104">> port.txt
+echo "http://${var}:5108">> port.txt
+echo "http://${var}:5800">> port.txt
+echo "http://${var}:6543">> port.txt
+echo "http://${var}:7000">> port.txt
+echo "http://${var}:7396">> port.txt
+echo "http://${var}:7474">> port.txt
+echo "http://${var}:8000">> port.txt
+echo "http://${var}:8001">> port.txt
+echo "http://${var}:8008">> port.txt
+echo "http://${var}:8014">> port.txt
+echo "http://${var}:8042">> port.txt
+echo "http://${var}:8069">> port.txt
+echo "http://${var}:8080">> port.txt
+echo "http://${var}:8081">> port.txt
+echo "http://${var}:8088">> port.txt
+echo "http://${var}:8090">> port.txt
+echo "http://${var}:8091">> port.txt
+echo "http://${var}:8118">> port.txt
+echo "http://${var}:8123">> port.txt
+echo "http://${var}:8172">> port.txt
+echo "http://${var}:8222">> port.txt
+echo "http://${var}:8243">> port.txt
+echo "http://${var}:8280">> port.txt
+echo "http://${var}:8281">> port.txt
+echo "http://${var}:8333">> port.txt
+echo "http://${var}:8443">> port.txt
+echo "http://${var}:8500">> port.txt
+echo "http://${var}:8834">> port.txt
+echo "http://${var}:8880">> port.txt
+echo "http://${var}:8888">> port.txt
+echo "http://${var}:8983">> port.txt
+echo "http://${var}:9000">> port.txt
+echo "http://${var}:9043">> port.txt
+echo "http://${var}:9060">> port.txt
+echo "http://${var}:9080">> port.txt
+echo "http://${var}:9090">> port.txt
+echo "http://${var}:9091">> port.txt
+echo "http://${var}:9200">> port.txt
+echo "http://${var}:9443">> port.txt
+echo "http://${var}:9800">> port.txt
+echo "http://${var}:9981">> port.txt
+echo "http://${var}:12443">> port.txt
+echo "http://${var}:16080">> port.txt
+echo "http://${var}:18091">> port.txt
+echo "http://${var}:18092">> port.txt
+echo "http://${var}:20720">> port.txt
+echo "http://${var}:28017">> port.txt
 
 echo "https://${var}" >> port.txt
 echo "https://${var}:1010" >> port.txt
@@ -98,6 +170,78 @@ echo "https://${var}:89" >> port.txt
 echo "https://${var}:9090" >> port.txt
 echo "https://${var}:9443" >> port.txt
 echo "https://${var}:981" >> port.txt
+echo "https://${var}:80" >> port.txt
+echo "https://${var}:81">> port.txt
+echo "https://${var}:300">> port.txt
+echo "https://${var}:443">> port.txt
+echo "https://${var}:591">> port.txt
+echo "https://${var}:593">> port.txt
+echo "https://${var}:832">> port.txt
+echo "https://${var}:981">> port.txt
+echo "https://${var}:1010">> port.txt
+echo "https://${var}:1311">> port.txt
+echo "https://${var}:2082">> port.txt
+echo "https://${var}:2087">> port.txt
+echo "https://${var}:2095">> port.txt
+echo "https://${var}:2096">> port.txt
+echo "https://${var}:2480">> port.txt
+echo "https://${var}:3000">> port.txt
+echo "https://${var}:3128">> port.txt
+echo "https://${var}:3333">> port.txt
+echo "https://${var}:4243">> port.txt
+echo "https://${var}:4567">> port.txt
+echo "https://${var}:4711">> port.txt
+echo "https://${var}:4712">> port.txt
+echo "https://${var}:4993">> port.txt
+echo "https://${var}:5000">> port.txt
+echo "https://${var}:5104">> port.txt
+echo "https://${var}:5108">> port.txt
+echo "https://${var}:5800">> port.txt
+echo "https://${var}:6543">> port.txt
+echo "https://${var}:7000">> port.txt
+echo "https://${var}:7396">> port.txt
+echo "https://${var}:7474">> port.txt
+echo "https://${var}:8000">> port.txt
+echo "https://${var}:8001">> port.txt
+echo "https://${var}:8008">> port.txt
+echo "https://${var}:8014">> port.txt
+echo "https://${var}:8042">> port.txt
+echo "https://${var}:8069">> port.txt
+echo "https://${var}:8080">> port.txt
+echo "https://${var}:8081">> port.txt
+echo "https://${var}:8088">> port.txt
+echo "https://${var}:8090">> port.txt
+echo "https://${var}:8091">> port.txt
+echo "https://${var}:8118">> port.txt
+echo "https://${var}:8123">> port.txt
+echo "https://${var}:8172">> port.txt
+echo "https://${var}:8222">> port.txt
+echo "https://${var}:8243">> port.txt
+echo "https://${var}:8280">> port.txt
+echo "https://${var}:8281">> port.txt
+echo "https://${var}:8333">> port.txt
+echo "https://${var}:8443">> port.txt
+echo "https://${var}:8500">> port.txt
+echo "https://${var}:8834">> port.txt
+echo "https://${var}:8880">> port.txt
+echo "https://${var}:8888">> port.txt
+echo "https://${var}:8983">> port.txt
+echo "https://${var}:9000">> port.txt
+echo "https://${var}:9043">> port.txt
+echo "https://${var}:9060">> port.txt
+echo "https://${var}:9080">> port.txt
+echo "https://${var}:9090">> port.txt
+echo "https://${var}:9091">> port.txt
+echo "https://${var}:9200">> port.txt
+echo "https://${var}:9443">> port.txt
+echo "https://${var}:9800">> port.txt
+echo "https://${var}:9981">> port.txt
+echo "https://${var}:12443">> port.txt
+echo "https://${var}:16080">> port.txt
+echo "https://${var}:18091">> port.txt
+echo "https://${var}:18092">> port.txt
+echo "https://${var}:20720">> port.txt
+echo "https://${var}:28017">> port.txt
 
 done
 
