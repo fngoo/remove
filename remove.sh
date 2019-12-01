@@ -276,15 +276,6 @@ mkdir $output/httprobe
 cd /root/script/4_getjs/EyeWitness
 python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --timeout 16 --web --no-prompt -d $output/httprobe
 
-#whatsweb
-webanalyze -update
-for line in `cat /root/script/3_httprobe/httprobe.txt`
-do
-echo "webanalyze -crawl 12 -host $line -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt ; wc -l /root/whatsweb.txt" > analyze.sh
-timeout 36 bash analyze.sh
-rm analyze.sh
-done
-
 #创建目录
 cd /root/script/3_httprobe
 input=httprobe.txt ; export input=httprobe.txt
