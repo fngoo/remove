@@ -302,3 +302,4 @@ done
 rm dir_* -r
 ls ; wc -l $output/red_xss.txt
 date "+%Y-%m-%d_%H:%M:%S" >> /root/date.txt ; echo 'remove' >> /root/date.txt
+exit
