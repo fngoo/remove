@@ -266,16 +266,6 @@ then
 rm -r $output/3_vulnx
 fi
 
-#Eyewitness
-cd /root/script/4_getjs
-rm -r EyeWitness
-cd /root/script/4_getjs
-git clone https://github.com/FortyNorthSecurity/EyeWitness
-cd EyeWitness/setup ; bash setup.sh ; bash setup.sh ; pip3 install --upgrade pyasn1-modules
-mkdir $output/httprobe
-cd /root/script/4_getjs/EyeWitness
-python3 EyeWitness.py -f /root/script/3_httprobe/httprobe.txt --timeout 16 --web --no-prompt -d $output/httprobe
-
 #创建目录
 cd /root/script/3_httprobe
 input=httprobe.txt ; export input=httprobe.txt
