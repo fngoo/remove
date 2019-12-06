@@ -245,7 +245,7 @@ echo "https://${var}:28017">> port.txt
 
 done
 
-vl -s 50 port.txt | grep -v "\[50" | grep -oP "http.*" >> /root/script/3_httprobe/httprobe.txt ; rm port.txt
+vl -t 15 -s 50 port.txt | grep -v "\[50" | grep -oP "http.*" >> /root/script/3_httprobe/httprobe.txt ; rm port.txt
 sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe.txt
 
 ls ; wc -l $input
