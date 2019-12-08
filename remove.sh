@@ -246,6 +246,11 @@ echo "https://${var}:28017">> port.txt
 done
 
 vl -t 15 -s 50 port.txt | grep -v "\[50" | grep -oP "http.*" >> /root/script/3_httprobe/httprobe.txt ; rm port.txt
+vl=`ps -A | grep vl | awk '{print $1}' | sed 's/[[:space:]]//g'`
+for line in $vl
+do
+kill -9 $line
+done
 sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe.txt
 
 ls ; wc -l $input
