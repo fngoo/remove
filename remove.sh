@@ -253,6 +253,16 @@ kill -9 $line
 done
 sort -u /root/script/3_httprobe/httprobe.txt -o /root/script/3_httprobe/httprobe.txt
 
+#whatsweb
+rm apps.json
+webanalyze -update
+for line in `cat /root/script/3_httprobe/httprobe.txt`
+do
+echo "webanalyze -crawl 12 -host \"$line\" -output csv >> /root/whatsweb.txt ; sort -u /root/whatsweb.txt -o /root/whatsweb.txt ; wc -l /root/whatsweb.txt" > analyze.sh
+timeout 16 bash analyze.sh
+done
+rm analyze.sh
+
 ls ; wc -l $input
 
 #vulnx
