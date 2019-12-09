@@ -4,6 +4,7 @@
 cd /root/script/3_httprobe
 input=httprobe.txt ; export input=httprobe.txt
 wc -l $input
+rm /root/watch -r
 
 i=1
 echo '#!/bin/bash' >> /root/script/3_httprobe/exe.sh
