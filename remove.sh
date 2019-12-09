@@ -265,6 +265,13 @@ rm analyze.sh
 
 ls ; wc -l $input
 
+#smuggling
+rm -r /root/script/3_httprobe/pentest-tools
+cd /root/script/3_httprobe
+git clone https://github.com/gwen001/pentest-tools
+cd pentest-tools
+python3 smuggler.py -i 15 -t 1 -v 2 -o $var | grep VULN >> $output/3_Smuggler
+
 #vulnx
 rm -r /root/script/3_httprobe/vulnx
 cd /root/script/3_httprobe
