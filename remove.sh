@@ -305,6 +305,7 @@ echo "webanalyze -crawl 12 -host \"$line\" -output csv >> /root/whatsweb.txt ; s
 timeout 16 bash analyze.sh
 done
 rm analyze.sh
+rm apps.json
 
 ls ; wc -l $input
 
